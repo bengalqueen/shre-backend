@@ -1,3 +1,3 @@
-# chai aur backend series
+# Backend Learning
 
-This is a video series on backend with javascript
+This is a series on backend with javascript
