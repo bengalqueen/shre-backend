@@ -1,10 +1,20 @@
 // require('dotenv').config({path: './env'})
 import dotenv from "dotenv"
 import connectDB from "./db/index.js";
+import express from "express"
+import userRouter from "./routes/user.routes.js";  
 
+const app = express()
+ 
 dotenv.config({
     path: './env'
 })
+
+// Middleware
+app.use(express.json());
+
+// Routes
+app.use("/api/v1/users", userRouter);  
 
 connectDB()
 .then(() => {
